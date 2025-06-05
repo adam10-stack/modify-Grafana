@@ -6,7 +6,7 @@ pipeline {
         stage('Change Grafana Tab Title') {
             steps {
                 sh '''
-                    sudo find /usr/share/grafana/public/build/ -name '*.js' -exec sed -i 's#AppTitle="iZeno"#AppTitle="Grafana"#g' {} ';'
+                    sudo find /usr/share/grafana/public/build/ -name '*.js' -exec sed -i 's#AppTitle="Grafana"#AppTitle="iZeno"#g' {} ';'
                 '''
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Change Grafana Login Page Text') {
             steps {
                 sh '''
-                    sudo find /usr/share/grafana/public/build/ -name '*.js' -exec sed -i 's#LoginTitle="Welcome to iZeno"#LoginTitle="Welcome to Grafana"#g' {} ';'
+                    sudo find /usr/share/grafana/public/build/ -name '*.js' -exec sed -i 's#LoginTitle="Welcome to Grafana"#LoginTitle="Welcome to iZeno"#g' {} ';'
                 '''
             }
         }
