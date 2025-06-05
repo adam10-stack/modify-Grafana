@@ -19,7 +19,7 @@ pipeline {
             }
         }
 		
-		stage('Test Grafana') {
+		stage('Test Grafana Connection') {
             steps {
                 sh '''
                     wget http://grafana:3000
